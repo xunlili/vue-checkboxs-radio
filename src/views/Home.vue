@@ -11,7 +11,7 @@
 <script>
 // @ is an alias to /src
 // import checkGroup from '../checkbox/check-group.vue'
-// import checkItem from '../checkbox/check-item.vue'
+// import checkItem from '../checkbox/check-item.vue'1
 export default {
   name: 'home',
   components: {
