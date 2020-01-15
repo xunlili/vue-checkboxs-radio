@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <checkGroup>
+      <checkItem name="watermelon" :checkedImg="checkedImg" :disCheckedImg="disCheckedImg" label="西瓜"/>
+      <checkItem name="apple" :checkedImg="checkedImg" :disCheckedImg="disCheckedImg" label="苹果"/>
+      <checkItem name="banana" :checkedImg="checkedImg" :disCheckedImg="disCheckedImg" :disabledImg="disabledImg" label="香蕉" :disabled="true"/>
+    </checkGroup>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+// import checkGroup from '../checkbox/check-group.vue'
+// import checkItem from '../checkbox/check-item.vue'
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    // checkGroup,
+    // checkItem,
+  },
+  data(){
+    return{
+      checkedImg:`${require('../assets/checked.png')}`,
+      disCheckedImg:`${require('../assets/dis-checked.png')}`,
+      disabledImg:`${require('../assets/disabled.jpg')}`,
+      favorites: ['apple']
+    }
   }
 }
 </script>
