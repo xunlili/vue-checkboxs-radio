@@ -25,7 +25,7 @@ export default {
     },
     disabledImg: {
       type: String,
-      default: `${require('../assets/dis-checked.png')}`,
+      default: `${require('../assets/disabled.png')}`,
     },
     label: {
       type: String,
@@ -68,6 +68,7 @@ export default {
   .select-item{
     display: flex;
     .icon{
+      margin-right: 10px;
       img{
         width: 25px;
         height: 25px;
