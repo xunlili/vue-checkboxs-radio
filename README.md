@@ -29,7 +29,7 @@ Vue.use(checkItem)
 
 ### 说明
 ```
-favorites  // [] 双向绑定的已经选中的选项
+favorites  // 双向绑定的已经选中的选项 如果是Array就是checkbox如果是String就是radio
 checkedImg  // String 选中时的icon图 eg: `${require('../assets/checked.png')}`
 disCheckedImg  // String 未选中时的icon图
 disabledImg  // String 禁选中时的icon图

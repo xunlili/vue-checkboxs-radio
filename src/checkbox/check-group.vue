@@ -1,6 +1,6 @@
 <template>
   <div class="big-select-btn-group">
-    <slot></slot>
+    <slot v-if="flag"></slot>
   </div>
 </template>
 <script>
@@ -8,8 +8,7 @@ export default {
   name:"checkGroup",
   props:{
     value:{
-      type: Array,
-      required: false,
+      required: true,
       default:()=>{
         return[]
       },
@@ -17,7 +16,8 @@ export default {
   },
   data(){
     return{
-      arr:[]
+      arr:[],
+      flag: true,
     }
   },
   provide() {
@@ -29,7 +29,15 @@ export default {
     this.arr=this.value
   },
   methods:{
-    check(name,status){
+    radioChanged(name,status){
+      this.flag = false;
+      this.$nextTick(()=>{
+        this.flag = true;
+        if (status) this.$emit('input',name)
+      })
+      
+    },
+    checkBoxChanged(name,status){
       if (status) {
         this.arrAddItme(this.arr,name)
       } else {

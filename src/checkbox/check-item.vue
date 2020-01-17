@@ -43,20 +43,24 @@ export default {
   data(){
     return {
       status: false,
+      isRadio: this.Group.value.constructor === String,
     }
   },
 
   mounted(){
-    if (this.Group.value.includes(this.name)) {
-      this.status = true;
-    }
-    
+    if (this.Group.value.includes(this.name) || this.Group.value === this.name) {
+        this.status = true;
+      }
   },
   methods:{
     checking(){
       if (this.disabled) return;
       this.status = !this.status;
-      this.Group.check(this.name,this.status);
+      if (this.isRadio) {
+        this.Group.radioChanged(this.name,this.status);
+      } else {
+        this.Group.checkBoxChanged(this.name,this.status);
+      }
     }
   }
 }

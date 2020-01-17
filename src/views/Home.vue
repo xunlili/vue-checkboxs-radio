@@ -23,7 +23,7 @@ export default {
       checkedImg:`${require('../assets/checked.png')}`,
       disCheckedImg:`${require('../assets/dis-checked.png')}`,
       disabledImg:`${require('../assets/disabled.png')}`,
-      favorites: ['apple']
+      favorites: 'apple'
     }
   }
 }
