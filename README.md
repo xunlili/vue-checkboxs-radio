@@ -36,4 +36,5 @@ disabledImg  // String 禁选中时的icon图
 label  // String 选项文字内容
 disabled  // Boolean 是否禁选
 ```
-
+### github
+https://github.com/xunlili/vue-checkboxs-radio
