@@ -7,7 +7,7 @@ npm install --save vue-checkboxs-radio
 
 ### 在main.js中引入样式
 ```
-import 'vue-checkboxs-radio/checkbox.css'
+import 'vue-checkboxs-radio/dist/checkbox.css'
 ```
 
 ### 在main.js中全局引入组件和注册组件
